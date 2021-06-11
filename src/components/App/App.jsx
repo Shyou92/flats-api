@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import flatReducer from '../../redux/reducers/flatReducer';
 import getFlats from '../../redux/actionCreators';
 import store from '../../redux/store';
+import Flats from '../Flats/Flats';
 
 function App({ getFlats }) {
   useEffect(() => {
@@ -22,7 +23,7 @@ function App({ getFlats }) {
   return (
     <div className='App'>
       <button onClick={obtainData}>Click</button>
-      {/* <h1>{flats}</h1> */}
+      <Flats />
     </div>
   );
 }
