@@ -6,7 +6,6 @@ import getFlats from '../../redux/actionCreators';
 import store from '../../redux/store';
 import Preloader from '../Preloader/Preloader';
 import FlatsList from '../FlatsList/FlatsList';
-import Flats from '../Flats/Flats';
 
 function App({ flats, getFlats }) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,19 +23,28 @@ function App({ flats, getFlats }) {
       store.dispatch(() => getFlats(res));
     });
   }
-  console.log(isLoaded);
+
   return (
     <div className='App'>
-      <h1 className='header'>Добро пожаловать в квартиру всей вашей жизни</h1>
-      <button onClick={obtainData}>Click</button>
-      {flats.length === 0 && isLoaded ? <Preloader /> : <FlatsList />}
+      <div className='page'>
+        <div className='container'>
+          <h1 className='header'>Поищем квартиру Вашей мечты?</h1>
+          {flats.length === 0 && !isLoaded ? (
+            <button className='search' onClick={obtainData}>
+              Поиск
+            </button>
+          ) : (
+            ''
+          )}
+          {flats.length === 0 && isLoaded ? <Preloader /> : <FlatsList />}
+        </div>
+      </div>
     </div>
   );
 }
 
 const mapStateToProps = (state) => {
   const flats = state.flatReducer.flatsList;
-  console.log(flats);
   return {
     flats,
   };

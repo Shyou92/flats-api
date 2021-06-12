@@ -1,0 +1,84 @@
+.flatCard{
+  width: 25%;
+  border: 1px solid white;
+  margin-right: 10px;
+  position: relative;
+}
+
+.flatCard__header {
+  margin: 5px  0;
+  padding: 0;
+  text-align: center;
+}
+
+.flatCard__image {
+  width: 100%;
+}
+
+.flatCard__like {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 1%;
+  right: 3%;
+  border: none;
+  outline: none;
+  background-color: rgb(71, 69, 69);
+  cursor: pointer;
+  background-image: url('../../images/Like.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flatCard__info {
+  width: 100%;
+  margin: 5px;
+}
+
+.flatCard__like_active {
+  background-image: url('../../images/Like-active.svg');
+}
+
+.flatCard:nth-last-of-type(1) {
+  margin-right: 0;
+}
+
+.flatCard__like:hover {
+  transition: .7s;
+  opacity: .4;
+}
+
+.flatCard__info:nth-last-of-type(1) {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .flatCard__like {
+    margin-left: 45%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .flatCard {
+    margin: 5px 0;
+    width: 70%
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .flatCard__header {
+    line-height: 20px;
+    word-break: break-all;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .flatCard__header {
+    line-height: 1.6;
+  }
+
+  .flatCard__info {
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,8 @@
+.page {
+  margin: 0px;
+  padding: 0;
+  min-width: 320px;
+  max-width: 5120px;
+  background-color: rgb(71, 69, 69);
+  color: white;
+}

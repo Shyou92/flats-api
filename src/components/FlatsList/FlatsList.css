@@ -1,0 +1,14 @@
+.flatsList {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 720px) {
+  .flatsList {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}
