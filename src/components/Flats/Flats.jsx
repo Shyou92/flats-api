@@ -10,7 +10,7 @@ function Flats({ flat }) {
   }
 
   return (
-    <div className='flatCard'>
+    <section className='flatCard'>
       <h2 className='flatCard__header'>{flat.attributes.title}</h2>
       <img className='flatCard__image' src={Flat} alt='flat'/>
       <p className='flatCard__info'>
@@ -29,7 +29,7 @@ function Flats({ flat }) {
         {flat.relationships.attributes.last_name}
       </p>
       <button className={`flatCard__like ${isLike ? 'flatCard__like_active' : ''}`} onClick={handleLikeFlat}></button>
-    </div>
+    </section>
   );
 }
 
