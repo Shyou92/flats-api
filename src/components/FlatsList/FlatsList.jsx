@@ -3,13 +3,13 @@ import Flats from '../Flats/Flats';
 
 function FlatsList({ flats }) {
   return (
-    <div className='flatsList'>
+    <section className='flatsList'>
       {flats.length === 0
         ? ''
         : flats.map((flat) => {
             return <Flats key={flat.id} flat={flat} />;
           })}
-    </div>
+    </section>
   );
 }
 
